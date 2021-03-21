@@ -15,29 +15,29 @@ document.getElementById("player_answer").innerHTML = "Answer Turn - " + player2_
 
 
 function send() {
-    get_word = document.getElementById("word").value;
-    word = get_word.toLowerCase();
-    console.log("word in lowercase = " + word);
+    get_question = document.getElementById("question").value;
+    question = get_question.toLowerCase();
+    console.log("question in lowercase = " + question);
 
-    charAt1 = word.charAt(1);
+    charAt1 = question.charAt(1);
     console.log(charAt1);
 
-    length_divide_2 = Math.floor(word.length_divide/2);
+    length_divide_2 = Math.floor(question.length_divide/2);
     charAt2 = word.charAt(length_divide_2);
     console.log(charAt2);
 
-    length_minus_1 = word.length - 1;
-    charAt3 = word.charAt(length_minus_1);
+    length_minus_1 = question.length - 1;
+    charAt3 = question.charAt(length_minus_1);
     console.log(charAt3)
 
-    remove_charAt1 = word.replace(charAt1, "__");
+    remove_charAt1 = question.replace(charAt1, "__");
     remove_charAt2 = remove_charAt1.replace(charAt2, "__");
     remove_charAt3 = remove_charAt2.replace(charAt3, "__");
     console.log(remove_charAt3);
 
-    question_word = "<h4 id='word_display'> Q.  "+remove_charAt3+"</h4>";
+    question_mulitply = "<h4 id='word_question'> Q.  "+remove_charAt3+"</h4>";
     input_box = "<br> Answer : <input type='text' id='input_check_box'>";
-    row = question_word+input_box+check_button ;
+    row = question_multiply+input_box+check_button ;
     document.getElementById("output").innerHTML = row;
-    document.getElementById("word").value = "";
+    document.getElementById("question").value = "";
 }
