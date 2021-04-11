@@ -32,7 +32,7 @@ function send() {
 function check()
 {
 	get_answer = document.getElementById("input_check_box").value;
-	answer = get_answer.toLowerCase();
+	answer = get_answer;
 	console.log("answer in numbers - " + answer);
 	if(answer == word)	
 	{
