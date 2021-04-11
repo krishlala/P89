@@ -1,4 +1,5 @@
-player1_name = localStorage.getItem("player1_name");
+
+	player1_name = localStorage.getItem("player1_name");
 	player2_name = localStorage.getItem("player2_name");
 
 	player1_score = 0;
@@ -29,12 +30,14 @@ function send() {
 	document.getElementById("number2").value = "";
 }
 
+
+question_turn = "player1";
+answer_turn = "player2";
+
 function check()
 {
 	get_answer = document.getElementById("input_check_box").value;
-	answer = get_answer;
-	console.log("answer in numbers - " + answer);
-	if(answer == word)	
+	if(get_answer == actual_answer)	
 	{
 		if(answer_turn == "player1")
 		{
@@ -47,6 +50,7 @@ function check()
 		    document.getElementById("player2_score").innerHTML = player2_score;
 		}
 	}
+	
 	if(question_turn == "player1")
 	{
 		question_turn = "player2"
